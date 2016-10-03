@@ -1,0 +1,51 @@
+<style>
+.panel{
+    display:inline-block;
+    
+}
+.wrap {
+    width: 100%;
+    height: 660px;
+    padding: 0;
+    overflow: hidden;
+}
+#frame {
+    width: 1920px;
+    height: 1080px;
+    border: 0;
+    -ms-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.label{
+    display:inline-block;
+}
+#url{
+    display:inline-block;
+    width: 800px;
+}
+</style>
+<script>
+    function go(e){
+        if (e.keyCode === 13){
+            document.getElementById('frame').src=document.getElementById('url').value;
+        }
+    }
+</script>
+<section class="panel">
+    <div>
+        <div class="label">URL</div>
+        <input type="text" id="url" onkeypress="go(event)" />
+    </div>
+</section>
+<div class="wrap">
+    <iframe id="frame" src="http://php-kkhchan.rhcloud.com"></iframe>
+</div>
